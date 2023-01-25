@@ -33,6 +33,14 @@ jobs:
         with:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/myapp
+      - name: Setup Java JDK
+        uses: actions/setup-java@v3.9.0
+        with:
+          java-version: 11
+      - name: check if java installed      
+        run: |
+          java --version
+          
 
   deploy:
     runs-on: windows-latest

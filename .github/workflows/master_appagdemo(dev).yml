@@ -37,6 +37,7 @@ jobs:
         uses: actions/setup-java@v3.9.0
         with:
           java-version: 11
+          distribution: adopt-openj9
       - name: check if java installed      
         run: |
           java --version
